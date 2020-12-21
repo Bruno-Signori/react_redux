@@ -6,7 +6,7 @@ export interface IProduct {
 
 export interface ICartItem {
   product: IProduct;
-  quantity: number
+  quantity: number;
 }
 
 export interface ICartState {
