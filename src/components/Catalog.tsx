@@ -12,7 +12,6 @@ const Catalog: React.FC = () => {
     })
   }, []);
 
- 
   return (
     <main>
     <h1>catalog</h1>

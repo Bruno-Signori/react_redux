@@ -1,13 +1,35 @@
-import {IProduct} from './types';
+import {ActionTypes, IProduct} from './types';
 
 
-export function addProductToCart(product: IProduct) {
+export function addProductToCartRequest(product: IProduct) {
 // USAR EXPRESSOES BEM DESCRITIVAS
   return {
-    type: 'ADD_PRODUCT_TO_CART',
+    type: ActionTypes.AddProductToCartRequest,
     //no payload passo a informações contidas no que estamos addicionando
     payload:{
       product,
     }
   };
 }
+
+export function addProductToCartSuccess(product: IProduct) {
+  // USAR EXPRESSOES BEM DESCRITIVAS
+    return {
+      type: ActionTypes.AddProductToCartSuccess,
+      //no payload passo a informações contidas no que estamos addicionando
+      payload:{
+        product,
+      }
+    };
+  }
+  
+export function addProductToCartFailure(productId: number) {
+  // USAR EXPRESSOES BEM DESCRITIVAS
+    return {
+      type: ActionTypes.AddProductToCartFailure,
+      //no payload passo a informações contidas no que estamos addicionando
+      payload:{
+        productId,
+      }
+    };
+  }
